@@ -1,0 +1,37 @@
+{
+  "name": "essential-transaction-acid-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A reference NestJS checkout for a shoe shop: one service, one Postgres database, five writes per order in one transaction.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "up": "docker compose up -d --build --wait",
+    "down": "docker compose down -v",
+    "migrate": "node dist/cli/main.js migrate",
+    "seed": "node dist/cli/main.js seed",
+    "test": "jest -c jest.unit.config.js",
+    "test:e2e": "jest -c jest.e2e.config.js --runInBand"
+  },
+  "dependencies": {
+    "@nestjs/common": "11.2.11",
+    "@nestjs/core": "11.2.11",
+    "@nestjs/platform-express": "11.2.11",
+    "pg": "8.23.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.3",
+    "@types/jest": "29.5.14",
+    "@types/node": "22.20.4",
+    "@types/pg": "8.23.1",
+    "jest": "29.7.0",
+    "ts-jest": "29.4.12",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT"
+}

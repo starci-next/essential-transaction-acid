@@ -1,0 +1,6 @@
+export { CheckoutService } from "./checkout.service"
+export { SHOP_ERROR_KINDS, ShopError, ShopErrorCode } from "./errors/shop.error"
+export { ShopModule } from "./shop.module"
+export { ShopReadService } from "./shop-read.service"
+export type { CheckoutInput, CheckoutLine, OrderView, PlacedOrder, StockView, VoucherOutcome, WalletView } from "./shop.contracts"
+export { applySeeds, reseed, seedIfEmpty } from "./shop.sample"
